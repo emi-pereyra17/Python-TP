@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://unpkg.com/htmx.org@1.4.1"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Álbum de Fotos</title>
+</head>
+<body>
+    <div class="container d-flex justify-content-center align-items-center">
+        <div class="shadow p-4 rounded custom-container">
+            <h1 class="text-center">Álbum de Fotos</h1>
+            <div class="text-center">
+                <a href="{{ url_for('main.add_photo') }}" class="btn btn-info">Añadir nueva foto</a>
+            </div>
+            <br>
+            {% block content %}{% endblock %}
+        </div>
+    </div>
+</body>
+</html>
+
+</html>
